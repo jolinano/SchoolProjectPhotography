@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jolina Photography</title>
+
+<style type="text/css">
+html, body{ 
+  margin: 0px;
+  padding: 0px; 
+  border: 0px;
+  background-color:#666666;
+  color: #ffffff;
+}
+
+  .film {
+  height:150px;
+  width:100%; 
+  margin: 0px;
+  padding: 0px;
+  background: #ffffff;
+  color: #ff6600;
+  text-align: center;
+  }
+  
+  .text{
+	font-size: 28px;
+	text-align: center;
+	margin-top: 40px;
+  }
+  
+    td {
+    height: 140px;
+	text-align: center;
+	width:25%;
+	min-width:25%;
+	max-width:25%;
+  }
+  
+  A:link {text-decoration: none; color:#ffffff;}
+  A:visited {text-decoration: none; color:#ffffff;}
+  A:active {text-decoration: none; color:#ffffff;}
+  A:hover {text-decoration: none; color:#ff6600;}
+  
+</style>
+
+<script language="javascript" type="text/javascript">
+  function changeDivImage(pic) {
+    parent.document.getElementById("framePhoto").style.zIndex="100";
+    parent.document.getElementById("framePhoto").style.backgroundImage ="url(pictures/"+pic+")";    
+  }
+  
+  
+</script>
+</head>
+
+<body>
+  <div class="text">Latest pictures</div> 
+  <br>
+     <div class="film">
+  <table style="width: 100%" cellspacing="4" cellpadding="4">
+	<tr>
+      <td onclick="changeDivImage('aIMG_1067.png');"><img border="0" img src="pictures/sen1.png"></td>
+      <td onclick="changeDivImage('aIMG_1073.png');"><img src="pictures/sen2.png"></td>
+      <td onclick="changeDivImage('aIMG_1014.png');"><img src="pictures/sen3.png"></td>
+      <td onclick="changeDivImage('aIMG_1030.png');"><img src="pictures/sen4.png"></td>
+    </tr>
+  </tr>
+  </table>
+     </div> 
+</body>
+
+</html>

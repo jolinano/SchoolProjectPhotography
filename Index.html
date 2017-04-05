@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+    <head>
+        <title>Jolina Photography</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<script language="JavaScript">
+ 
+ function preloader() 
+ {
+ 
+     // counter
+     var i = 0;
+ 
+     // create object
+     imageObj = new Image();
+ 
+     // set image list
+     images = new Array();
+     images[0]="pictures/headerbild1.png"
+     images[1]="pictures/headerbild1.png"
+     images[2]="pictures/headerbild1.png"
+ 
+     // start preloading
+     for(i=0; i<=images.length; i++) 
+     {
+          imageObj.src=images[i];
+     }
+ 
+ } 
+ 
+ </script>
+
+
+
+<style type="text/css">
+
+iframe {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: none;
+}
+   
+html, body{
+  margin:0;
+  padding:0;
+  height:100%;
+  min-height: 100%;
+  max-height: 100%;
+  border: 0px;
+  overflow: hidden;
+  background-color: #777777;
+}
+
+#frameTop {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background-color: transparent;  
+ /* background-image: url('pictures/headerbild1.png'); */
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+#frameBrand {
+	width: 312px;
+	height: 88px;
+	overflow: hidden;
+	background-color: transparent;
+	background-image: url('pictures/logotypesmallbred.png');
+	background-repeat: no-repeat;
+	  background-position: right bottom;
+	float: right;
+}
+
+#frameMain{ 
+  width: 900px; 
+  margin: 0 auto;
+  padding: 0px;
+  height: 100%; 
+  min-height: 100%;
+  overflow: hidden;
+}
+
+
+#Main {
+  padding: 0px;
+  position: fixed;
+  top:260px;
+  bottom:0px;
+  width: 900px;
+  font-family: Verdana;
+  font-size: 12px;
+  color: #3B4A67;
+  overflow: auto;
+  background-color: #666666;
+}
+
+#framePhoto {
+  width: 0px;
+  height: 0px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  background: rgb(38,38,38); /* The Fallback */
+   background: rgba(38,38,38, 0.9);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#framePhotoNavigate {
+  width: 44px;
+  height: 28px;
+  float: right;
+  position: relative;
+  z-index: 110;
+  overflow: hidden;
+  cursor: pointer;
+  border:0px outset ThreeDDarkShadow;
+  background-color:;
+  background-image: url('pictures/closeicon.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* S T A R T   -   Ä N D R A  H Ä R  F Ö R  K N A P P A R N A S  S T I L */
+  .buttonBar {
+    position: fixed;
+    top: 220px;
+    bottom:0px;
+    width: 900px;
+    height: 42px;
+    margin: 0px 0px;
+    padding:0px 0px;
+    display:table;
+    background-color:#cccccc;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+  }
+
+  .btn {
+    position:relative;
+    color:#ffffff;
+    background-color: #cccccc;
+    height: 42px;
+    min-height: 42px;
+    max-height: 42px;
+    width:180px;
+    float:left;
+    cursor:pointer;
+    font: normal normal normal 24px/42px Tahoma;
+    text-align: center;
+    top:0px;
+    -moz-border-radius:10px 10px 0px 0px;
+    -webkit-border-radius:10px 10px 0px 0px;
+    border-radius:10px 10px 0px 0px;
+    -khtml-border-radius:10px 10px 0px 0px;
+
+  }
+  
+  .btn:hover {
+    color:#ffffff;
+    background-color: #ff6600;
+    height: 42px;
+    min-height: 42px;
+    max-height: 42px;
+    font: normal normal normal 24px/42px Tahoma;
+    top:0px;
+  }
+
+  .active {
+    width:178px;
+    height: 42px;
+    min-height: 42px;
+    max-height: 42px;
+    top:0px;
+    color:#ffffff;
+    background-color: #666666;
+    border-left:1px #ffffff solid;
+    border-right:1px #ffffff solid;
+    border-top:1px #ffffff solid;  
+    -moz-border-radius:10px 10px 0px 0px;
+    -webkit-border-radius:10px 10px 0px 0px;
+    border-radius:10px 10px 0px 0px;
+    -khtml-border-radius:10px 10px 0px 0px;    
+    font: normal normal normal 24px/42px Tahoma;
+    text-align: center;
+    float:left;
+    cursor:pointer;   
+  }
+
+/* S L U T   -   Ä N D R A  H Ä R  F Ö R  K N A P P A R N A S  S T I L */
+
+
+</style>
+
+
+<script language="javascript" type="text/javascript">
+<!--  
+
+
+	
+  function setCSS(eleID) {
+  
+    var currTabElem = document.getElementById(eleID.id);
+    var btnMnu = document.getElementsByTagName("div");
+
+      for (var i=0; i < btnMnu.length; i++) {
+        if ((btnMnu[i].getAttribute('class') == "active") || (btnMnu[i].getAttribute('className') == "active")) {
+          btnMnu[i].setAttribute("class", "btn");
+          btnMnu[i].setAttribute("className", "btn");
+          }       
+        }    
+
+    currTabElem.setAttribute("class", "active");
+    currTabElem.setAttribute("className", "active");
+    
+  }
+
+
+  function launch(eleID) {
+    var btn = eleID.id;
+    var currTabElem = document.getElementById("ifm");
+
+    switch(parseInt(btn)) {
+      case 1:
+        currTabElem.setAttribute('src', '0Start.html');
+        break;
+      case 2:
+        currTabElem.setAttribute('src', '0albums.html');
+        break;
+      case 3:
+        currTabElem.setAttribute('src', '0About.html');
+        break;
+      case 4:
+        currTabElem.setAttribute('src', '0Contact.html');
+        break;
+      case 5:
+        params = 'location=0, directories=0, menubar=0, status=0, toolbar=0, scrollbars=1, resizable=0, width='+screen.width;
+        params += ', height='+screen.height;
+        params += ', top=0, left=0';
+
+        currTabElem.setAttribute('src', '0blog.html');
+
+        newwin = window.open('http://jolina.nu', 'newwin', params);
+		document.getElementById("film").style.visibility="hidden";
+        if (window.focus) {newwin.focus()}
+        break;
+
+      default:
+        currTabElem.setAttribute('src', 'pages/1.html');
+      }    
+  }
+  
+  function closePhotoFrame() {
+    document.getElementById("framePhoto").style.zIndex="-1";
+    document.getElementById("framePhoto").style.backgroundImage ="url(none)";   
+  }
+  
+ //-->
+</script>
+
+</head>
+
+<body onload="load()">
+<div id="framePhoto"><div id="framePhotoNavigate" onClick="closePhotoFrame()"></div></div>
+
+  <!-- Script för att justera höjden på iframe som laddar sidornas innehåll -->
+  <script language="javascript" type="text/javascript">
+  <!--
+	
+  
+  var buffer = 0; //scroll bar buffer
+  
+  function init() {
+    resizeIframe();
+	randomPic();
+  }  
+  
+  function pageY(elem) {
+    return elem.offsetParent ? (elem.offsetTop + pageY(elem.offsetParent)) : elem.offsetTop;
+  }  
+  
+  function resizeIframe() {
+    var height = window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight;
+    var myWidth = 630, myHeight = 460;
+	
+    if( typeof( window.innerWidth ) == 'number' ) {
+      //Non-IE
+      myWidth = window.innerWidth;
+      myHeight = window.innerHeight;
+    } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+      //IE 6+ in 'standards compliant mode'
+      myWidth = document.documentElement.clientWidth;
+      myHeight = document.documentElement.clientHeight;
+    } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+      //IE 4 compatible
+      myWidth = document.body.clientWidth;
+      myHeight = document.body.clientHeight;
+    }
+
+    height -= pageY(document.getElementById('ifm'))+ buffer ;
+    height = (height < 0) ? 0 : height;
+    document.getElementById('ifm').style.height = height + 'px';
+	
+	document.getElementById('framePhoto').style.height = myHeight + 'px';
+	document.getElementById('framePhoto').style.width = myWidth + 'px';
+  }
+  
+  window.onresize = resizeIframe;
+  window.onload = init;
+  
+ function randomPic() {
+   images = new Array( // set up an array of the images
+     "pictures/headerbild1.png",
+     "pictures/headerbild2.png",
+	 "pictures/headerbild3.png",
+	 "pictures/headerbild4.png",
+	 "pictures/headerbild5.png"
+     );
+
+   rand = Math.floor(Math.random()*images.length); // chose a random number, between 0 and the length of the array -1
+   currentImage = images[rand]; // set img to the random image's src
+
+   document.getElementById("frameTop").style.backgroundImage ="url("+currentImage+")"; //for div background
+}
+  //-->
+  </script>
+
+
+  <!-- Centrerat lager som håller hela sidan -->
+  
+  <div id="frameMain">
+  
+    <!-- Lager för menyn -->
+    <div id="frameTop">
+    
+      <!-- Bild uppe till höger -->
+      <div id="frameBrand" class="frameBrand"></div>
+
+      <!-- Horisontell knappmeny -->
+      <div class="buttonBar">
+        <div id="1" class="active" onmouseup="setCSS(this)" onclick="launch(this)">Launch</div>
+        <div id="2" class="btn" onmouseup="setCSS(this)" onclick="launch(this)">Albums</div>
+        <div id="3" class="btn" onmouseup="setCSS(this)" onclick="launch(this)">About</div>
+        <div id="4" class="btn" onmouseup="setCSS(this)" onclick="launch(this)">Contact</div>
+        <div id="5" class="btn" onmouseup="setCSS(this)" onclick="launch(this)">Blog</div>
+      </div>
+      
+	</div> 
+	
+	
+    
+	<!-- Lager för sidornas inehåll -->
+    <div id="Main">
+      <iframe id="ifm" name="ifm" src="0Start.html"></iframe>
+    </div>
+
+</div>
+  
+</body>
+</html>
